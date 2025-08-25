@@ -1,0 +1,16 @@
+{
+  "name": "reddit-parser",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@types/image-size": "^0.8.0",
+    "image-size": "^2.0.2",
+    "node-html-parser": "^7.0.1",
+    "rss": "^1.2.2",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/rss": "^0.0.32"
+  }
+}

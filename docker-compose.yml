@@ -15,6 +15,13 @@ services:
     environment:
       - PORT=80
 
+  image-digger:
+    build: ./image-digger
+    container_name: image-digger
+    restart: always
+    environment:
+      - PORT=80
+
   web:
     image: miniflux/miniflux
     restart: always
