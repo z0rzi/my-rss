@@ -4,6 +4,7 @@
   "main": "index.ts",
   "license": "MIT",
   "dependencies": {
+    "@types/bun": "^1.2.20",
     "@types/image-size": "^0.8.0",
     "image-size": "^2.0.2",
     "node-html-parser": "^7.0.1",

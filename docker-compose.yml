@@ -19,8 +19,11 @@ services:
     build: ./image-digger
     container_name: image-digger
     restart: always
+    ports:
+      - "8033:80"
     environment:
       - PORT=80
+      - HOST=${HOST}
 
   web:
     image: miniflux/miniflux
