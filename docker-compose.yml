@@ -25,6 +25,16 @@ services:
       - PORT=80
       - HOST=${HOST}
 
+  ai-daily-recap:
+    build: ./ai-daily-recap
+    container_name: ai-daily-recap
+    restart: always
+    ports:
+      - "8032:80"
+    environment:
+      - PORT=80
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+
   web:
     image: miniflux/miniflux
     restart: always
