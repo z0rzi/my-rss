@@ -33,6 +33,7 @@ services:
       - "8032:8032"
     environment:
       - PORT=8032
+      - HOST=${HOST}
       - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
 
   web:
