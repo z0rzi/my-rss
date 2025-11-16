@@ -9,5 +9,6 @@ COPY ./package.json /app/package.json
 RUN bun install
 
 COPY ./src /app/src
+COPY ./public /app/public
 
 CMD ["bun", "/app/src/index.ts"]

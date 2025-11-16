@@ -30,9 +30,9 @@ services:
     container_name: ai-daily-recap
     restart: always
     ports:
-      - "8032:80"
+      - "8032:8032"
     environment:
-      - PORT=80
+      - PORT=8032
       - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
 
   web:
