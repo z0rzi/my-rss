@@ -320,7 +320,10 @@ const msFromMidnight = now % msInDay;
 const msToMidnight = msInDay - msFromMidnight;
 
 setTimeout(() => {
-  // Will trigger at midnight
+  // Will trigger at midnight today
+  generateDailyRecapsForAllFeeds().catch((err) => {
+    console.error("Failed to generate daily recaps:", err);
+  });
   setInterval(() => {
     // Will trigger every day at midnight
     generateDailyRecapsForAllFeeds().catch((err) => {
