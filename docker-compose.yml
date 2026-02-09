@@ -36,8 +36,9 @@ services:
       - HOST=${HOST}
       - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
 
-  web:
+  miniflux:
     image: miniflux/miniflux
+    container_name: miniflux
     restart: always
     ports:
       - "8034:8080"
@@ -49,3 +50,11 @@ services:
       - ADMIN_PASSWORD=Passclearlsl
     depends_on:
       - db
+
+  web-client:
+    image: electh/nextflux:latest
+    container_name: nextflux
+    restart: always
+    ports:
+      - "8035:3000"
+
